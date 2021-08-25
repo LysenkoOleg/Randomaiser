@@ -11,7 +11,7 @@
         <!--Randomaiser-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Randomaiser" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Randomaiser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -100,7 +100,7 @@
         <!--Settings-->
         <scene sceneID="1nq-tm-ht9">
             <objects>
-                <viewController id="4G4-a0-8JP" sceneMemberID="viewController">
+                <viewController id="4G4-a0-8JP" customClass="SettingsViewController" customModule="Randomaiser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9kY-5a-IbH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -127,6 +127,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="91" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Save"/>
+                                        <connections>
+                                            <segue destination="UTw-E5-gfL" kind="unwind" unwindAction="unwindFor:" id="aGC-Kc-yuy"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VCD-pw-fuw">
                                         <rect key="frame" x="0.0" y="56" width="91" height="48"/>
@@ -134,6 +137,9 @@
                                         <state key="normal" title="Cancel">
                                             <color key="titleColor" systemColor="systemRedColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="cancelBottonPressed" destination="4G4-a0-8JP" eventType="touchUpInside" id="TVt-93-mvs"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -149,10 +155,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="dO1-fp-ZCa"/>
+                    <connections>
+                        <outlet property="maximumValueTF" destination="yOB-yb-V55" id="NGR-rD-ZF2"/>
+                        <outlet property="minimumValueTF" destination="tt1-Oa-nOA" id="fw3-cK-lPg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fva-kF-I2v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="UTw-E5-gfL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1647.826086956522" y="92.410714285714278"/>
+            <point key="canvasLocation" x="1735" y="93"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EXL-Oy-VV5">
