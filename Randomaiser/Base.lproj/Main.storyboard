@@ -26,6 +26,9 @@
                                 <state key="normal" title="GET RESULT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="getRandomNumberButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="nPQ-DA-DXz"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="C2M-VA-7X2">
                                 <rect key="frame" x="20" y="105" width="336" height="66"/>
@@ -76,6 +79,12 @@
                             <constraint firstItem="C2M-VA-7X2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="lvj-lG-8AF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="getRandomNumberBotton" destination="hMC-Ft-REb" id="51h-qm-X3B"/>
+                        <outlet property="maximumValueLabel" destination="ToF-nf-Hsa" id="FKJ-8u-jAM"/>
+                        <outlet property="minimumValueLabel" destination="som-jT-NsD" id="Opq-lw-sRO"/>
+                        <outlet property="randomValueLabel" destination="Ojh-Kl-Ict" id="buo-R1-3pl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
